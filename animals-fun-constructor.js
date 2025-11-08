@@ -9,7 +9,7 @@ Animal.prototype.run = function () {
 
 // let an = new Animal('Кролик');
 // an.run();
-
+//--------Rabbit---------
 function Rabbit(name) {
   Animal.apply(this, arguments);
 }
@@ -24,7 +24,25 @@ Rabbit.prototype.run = function () {
 
 let rabbit = new Rabbit("Кролик");
 rabbit.run();
+//-------------------
+//--------Cat---------
+function Cat(name) {
+  Animal.apply(this, arguments);
+}
 
+Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
+
+Cat.prototype.run = function () {
+  Animal.prototype.run.apply(this);
+  alert(this.name + " нявкає!");
+};
+
+let cat = new Cat("Котик");
+rabbit.run();
+//-------------------
+
+//--------Dog---------
 function Dog(name, nick, weight) {
   Animal.apply(this, arguments);
   this.weight = weight;
@@ -42,6 +60,8 @@ Dog.prototype.run = function () {
     alert(this.name + this.nick + " тяфкає!");
   }
 };
+
+//-------------------
 
 let fido = new Dog("Пес", "Fido", 38);
 let fluffy = new Dog("Пес", "Fluffy", 30);
