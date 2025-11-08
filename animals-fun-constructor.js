@@ -39,7 +39,7 @@ Cat.prototype.run = function () {
 };
 
 let cat = new Cat("Котик");
-rabbit.run();
+cat.run();
 //-------------------
 
 //--------Dog---------
