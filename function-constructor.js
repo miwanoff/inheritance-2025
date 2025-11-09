@@ -7,12 +7,18 @@ function Dog(name, breed, weight) {
   };
 }
 
+Dog.prototype.color="black";
+Dog.prototype.show=function () {
+  alert(`${this.name} ${this.color} ${this.breed} ${this.weight}`);
+}
+
 let fido = new Dog("Fido", "Mixed", 38);
 let fluffy = new Dog("Fluffy", "Poodle", 30);
 let spot = new Dog("Spot", "Chihuahua", 10);
 
 let dogs = [fido, fluffy, spot];
 for (let i = 0; i < dogs.length; i++) {
-  alert(dogs[i].name);
+  alert(dogs[i].name + dogs[i].color);
   dogs[i].bark();
+  dogs[i].show();
 }

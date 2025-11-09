@@ -9,6 +9,7 @@ Animal.prototype.run = function () {
 
 // let an = new Animal('Кролик');
 // an.run();
+
 //--------Rabbit---------
 function Rabbit(name) {
   Animal.apply(this, arguments);
@@ -70,5 +71,3 @@ let spot = new Dog("Пес", "Spot", 10);
 fido.run();
 fluffy.run();
 spot.run();
-
-

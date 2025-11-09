@@ -18,3 +18,5 @@ for (let i = 0; i < dogs.length; i++) {
   alert(dogs[i].name);
   dogs[i].bark();
 }
+
+
