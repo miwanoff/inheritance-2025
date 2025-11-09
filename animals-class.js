@@ -49,9 +49,15 @@ let fido = new Dog("Пес", "Fido");
 let fluffy = new Dog("Пес", "Fluffy");
 let spot = new Dog("Пес", "Spot");
 
-fido.run();
-fluffy.run();
-spot.run();
+// fido.run();
+// fluffy.run();
+// spot.run();
 
-fluffy.bark();
-spot.bark();
+// fluffy.bark();
+// spot.bark();
+
+let dogs = [fido, fluffy, spot];
+for (let i = 0; i < dogs.length; i++) {
+  alert(dogs[i].name + dogs[i].nick);
+  dogs[i].bark();
+}
